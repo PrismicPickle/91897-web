@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 15px;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    min-height: 100vh;
+}
+
+.main-area {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.top-menu {
+    background-color: #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-menu button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.top-menu button:hover {
+    background-color: #0052a3;
+}
+
+.left-menu {
+    background-color: #222;
+    width: 200px;
+    padding: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-menu ul {
+    list-style: none;
+}
+
+.left-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.left-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+.left-menu a:hover {
+    background-color: #0066cc;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+}
+
+.content h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.6;
+}
