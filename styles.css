@@ -45,7 +45,8 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.top-menu button {
+.top-menu button,
+.top-menu a {
     background-color: #414361;
     color: white;
     border: none;
@@ -54,14 +55,21 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.top-menu button:hover {
+.top-menu button:hover,
+.top-menu a:hover {
     background-color: #558c8c;
 }
 
+.top-menu li {
+    list-style: none;
+}
+
 .left-menu {
-    background-color: #2a2d43;
+    background-color: #414361;
     width: 200px;
     padding: 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -85,6 +93,11 @@ body {
 
 .left-menu a:hover {
     background-color: #558c8c;
+}
+
+.left-menu a.active {
+    background-color: #558c8c;
+    font-weight: 600;
 }
 
 .dropdown {
@@ -143,7 +156,7 @@ body {
 .content {
     flex: 1;
     padding: 30px;
-    background-color: #f5f5f5;
+    background-color: #2a2d43;
     overflow-y: auto;
 }
 
@@ -157,7 +170,3 @@ body {
     line-height: 1.6;
 }
 
-.active {
-  background-color: green;
-  color: white;
-}
