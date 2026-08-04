@@ -95,11 +95,6 @@ body {
     background-color: #558c8c;
 }
 
-.left-menu a.active {
-    background-color: #558c8c;
-    font-weight: 600;
-}
-
 .dropdown {
     position: relative;
 }
@@ -170,3 +165,6 @@ body {
     line-height: 1.6;
 }
 
+.active {
+    background-color: #558c8c;
+}
