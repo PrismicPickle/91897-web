@@ -133,7 +133,7 @@ body {
 
 .dropdown details[open] .dropdown-content {
     display: block;
-}
+}p
 
 .dropdown-content li {
     border-bottom: 1px solid #555;
@@ -148,23 +148,81 @@ body {
     background-color: #2a2d43;
 }
 
-.content {
+.header {
     flex: 1;
     padding: 30px;
     background-color: #2a2d43;
     overflow-y: auto;
 }
 
-.content h1 {
-    color: #333;
+.header h1 {
+    color: #fff;
     margin-bottom: 20px;
 }
 
-.content p {
-    color: #666;
+.header p {
+    color: #fff;
     line-height: 1.6;
 }
 
 .active {
     background-color: #558c8c;
+}
+
+.big-centipede {
+    flex: 1;
+    padding: 0px;
+    background-color: #414361;
+    overflow-y: auto;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    position: relative;
+    margin: 20px;
+
+}
+
+.little-centipede {
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 40%;
+    width: 59%;
+    height: 90%;
+    background-color: #2a2d43;
+}
+
+.little-centipede p {
+    color: #fff;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+.smallest-centipede{
+    height: 25%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10%;
+    left: 83%;
+    transform: translateX(-50%);
+    background-color: #7f2ccb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.smallest-centipede a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+.big-centipede img {
+    width: 40%;
+    height: auto;
+    display: block;
 }
