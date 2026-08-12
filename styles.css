@@ -243,6 +243,7 @@ body {
 .small-box{
     flex: 0 0 48px;
     height: 48px;
+    width: 48px;
     background: #414361;
     border: 1px solid #000000;
     border-radius: 2px;
