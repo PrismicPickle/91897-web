@@ -177,6 +177,7 @@ body {
     border: 1px solid #000000;
     border-radius: 2px;
     position: relative;
+    display: block;
     margin: 20px;
 
 }
@@ -225,4 +226,24 @@ body {
     width: 40%;
     height: auto;
     display: block;
+}
+
+.box-row{
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 20px 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.small-box{
+    flex: 0 0 48px;
+    height: 48px;
+    background: #414361;
+    border: 1px solid #000000;
+    border-radius: 2px;
 }
