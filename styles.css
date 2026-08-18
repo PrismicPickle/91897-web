@@ -241,10 +241,22 @@ body {
 }
 
 .small-box{
-    flex: 0 0 48px;
-    height: 48px;
-    width: 48px;
+    flex: 0 0 200px;
+    height: 200px;
+    width: 160px;
     background: #414361;
     border: 1px solid #000000;
     border-radius: 2px;
+}
+
+.small-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.small-box a {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
