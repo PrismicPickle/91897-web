@@ -37,6 +37,9 @@ body {
 }
 
 .top-menu {
+    position: sticky;
+    top: 0;
+    z-index: 20;
     background-color: #2a2d43;
     padding: 15px 30px;
     display: flex;
@@ -69,14 +72,47 @@ body {
 }
 
 .left-menu {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
     background-color: #414361;
     width: 200px;
     padding: 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .left-menu ul {
     list-style: none;
+}
+
+.account-panel {
+    margin-top: auto;
+    padding: 12px 10px 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.account-link:hover {
+    background-color: #558c8c;
+}
+
+.account-icon {
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 .left-menu li {
@@ -228,6 +264,14 @@ body {
     display: block;
 }
 
+.row-header {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 18px 20px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 .box-row{
     clear: both;
     display: flex;
@@ -334,7 +378,7 @@ body {
 
 .bottom-box-header{
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     margin: 0;
     width: 100%;
