@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>CaseLab - Inventory</title>
+
+    <link
+        rel="stylesheet"
+        href="casesstyles.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="logo">
+        CASE<span>LAB</span>
+    </div>
+
+
+    <nav>
+
+        <a href="csgo-case.html">
+            Open Case
+        </a>
+
+        <a
+            class="active"
+            href="inventory.html">
+            Inventory
+        </a>
+
+        <a href="stats.html">
+            Stats
+        </a>
+
+    </nav>
+
+
+    <div class="balance">
+
+        Balance:
+
+        <strong id="balance">
+            $250.00
+        </strong>
+
+    </div>
+
+</header>
+
+
+
+<main class="page">
+
+
+    <div class="page-heading">
+
+        <h1>
+            Inventory
+        </h1>
+
+        <p>
+            Your collected skins.
+        </p>
+
+    </div>
+
+
+
+    <div class="inventory-toolbar">
+
+
+        <div>
+
+            <strong>
+                Inventory
+            </strong>
+
+            <span
+                id="inventoryCount"
+                class="muted">
+
+                (0)
+
+            </span>
+
+        </div>
+
+
+
+        <div class="filters">
+
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search skins...">
+
+
+
+            <select id="rarityFilter">
+
+                <option value="all">
+                    All Rarities
+                </option>
+
+                <option value="consumer">
+                    Consumer Grade
+                </option>
+
+                <option value="industrial">
+                    Industrial Grade
+                </option>
+
+                <option value="mil">
+                    Mil-Spec
+                </option>
+
+                <option value="restricted">
+                    Restricted
+                </option>
+
+                <option value="classified">
+                    Classified
+                </option>
+
+                <option value="covert">
+                    Covert
+                </option>
+
+                <option value="special">
+                    Special
+                </option>
+
+            </select>
+
+
+
+            <select id="sort">
+
+                <option value="newest">
+                    Newest
+                </option>
+
+                <option value="value">
+                    Highest Value
+                </option>
+
+                <option value="name">
+                    Name
+                </option>
+
+            </select>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div
+        id="inventoryGrid"
+        class="inventory-grid">
+
+    </div>
+
+
+
+    <div class="inventory-footer">
+
+        <button
+            id="resetSave"
+            class="danger-button">
+
+            Reset Account
+
+        </button>
+
+    </div>
+
+
+</main>
+
+
+
+<div
+    id="toast"
+    class="toast">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>CaseLab - Stats</title>
+
+    <link
+        rel="stylesheet"
+        href="cases-styles.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="logo">
+        CASE<span>LAB</span>
+    </div>
+
+
+    <nav>
+
+        <a href="csgo-case.html">
+            Open Case
+        </a>
+
+        <a href="inventory.html">
+            Inventory
+        </a>
+
+        <a
+            class="active"
+            href="stats.html">
+
+            Stats
+
+        </a>
+
+    </nav>
+
+
+    <div class="balance">
+
+        Balance:
+
+        <strong id="balance">
+            $250.00
+        </strong>
+
+    </div>
+
+</header>
+
+
+
+<main class="page">
+
+
+    <div class="page-heading">
+
+        <h1>
+            Statistics
+        </h1>
+
+        <p>
+            Your case opening statistics.
+        </p>
+
+    </div>
+
+
+
+    <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <span>
+                Cases Opened
+            </span>
+
+            <strong id="casesOpened">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>
+                Money Spent
+            </span>
+
+            <strong id="moneySpent">
+                $0.00
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>
+                Money From Sales
+            </span>
+
+            <strong id="moneySold">
+                $0.00
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>
+                Inventory Value
+            </span>
+
+            <strong id="inventoryValue">
+                $0.00
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>
+                High Tier Drops
+            </span>
+
+            <strong id="highTierDrops">
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>
+                Current Balance
+            </span>
+
+            <strong id="currentBalance">
+                $250.00
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <section class="history-section">
+
+        <h2>
+            Opening History
+        </h2>
+
+
+        <div
+            id="historyList"
+            class="history-list">
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<div
+    id="toast"
+    class="toast">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CaseLab - Opening</title>
+
+    <link rel="stylesheet" href="cases-styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        CASE<span>LAB</span>
+    </div>
+
+    <nav>
+        <a class="active" href="csgo-case.html">Open Case</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="stats.html">Stats</a>
+    </nav>
+
+    <div class="balance">
+        Balance:
+        <strong id="balance">$250.00</strong>
+    </div>
+
+</header>
+
+
+<main class="opening-page">
+
+    <section class="opening-area">
+
+        <div class="opening-header">
+
+            <div>
+                <h1>Case Opening</h1>
+
+                <p>
+                    Good luck.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="roller-wrapper">
+
+            <div class="roller-pointer"></div>
+
+            <div class="roller">
+
+                <div
+                    id="rollerTrack"
+                    class="roller-track">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="result"
+            class="result">
+        </div>
+
+
+        <div class="opening-actions">
+
+            <button
+                id="openAgain"
+                class="primary-button"
+                disabled>
+
+                Open Another
+
+            </button>
+
+
+            <a
+                href="inventory.html"
+                class="secondary-button">
+
+                View Inventory
+
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    id="toast"
+    class="toast">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
