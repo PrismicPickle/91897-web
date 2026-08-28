@@ -1,3 +1,14 @@
+.top-menu .balance {
+    background-color: #414361;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.top-menu .balance strong {
+    color: #ffd35a;
+}
 * {
     margin: 0;
     padding: 0;
@@ -468,4 +479,71 @@ body {
   outline: #000000 solid 2px;
   border-radius: 50%;
   display: inline-block;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: #2a2d43;
+    color: white;
+}
+
+.content h1 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 25px;
+}
+
+.wallet-form {
+    width: min(100%, 420px);
+    padding: 25px;
+    background-color: #414361;
+    border: 1px solid #555975;
+    border-radius: 6px;
+}
+
+.wallet-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.amount-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    background-color: #2a2d43;
+    border: 1px solid #555975;
+    border-radius: 4px;
+}
+
+.amount-input span {
+    padding-left: 12px;
+    color: #bfc2d5;
+}
+
+.amount-input input {
+    width: 100%;
+    padding: 11px 12px 11px 6px;
+    color: white;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font: inherit;
+}
+
+.wallet-button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #7f2ccb;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.wallet-button:hover {
+    opacity: 0.9;
 }

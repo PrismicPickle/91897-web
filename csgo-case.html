@@ -9,19 +9,13 @@
     <link rel="stylesheet" href="cases-styles.css">
 </head>
 
-<body>
+<body class="case-opening-page">
 
 <header class="topbar">
 
-    <div class="logo">
-        CASE<span>LAB</span>
-    </div>
+    <a class="back-button" href="csgo.html">Back</a>
 
-    <nav>
-        <a class="active" href="csgo-case.html">Open Case</a>
-        <a href="inventory.html">Inventory</a>
-        <a href="stats.html">Stats</a>
-    </nav>
+    <a class="inventory-button" href="inventory.html">Inventory</a>
 
     <div class="balance">
         Balance:
@@ -72,23 +66,16 @@
 
         <div class="opening-actions">
 
+            <p id="casePrice" class="case-price"></p>
+
             <button
                 id="openAgain"
                 class="primary-button"
                 disabled>
 
-                Open Another
+                Buy Again
 
             </button>
-
-
-            <a
-                href="inventory.html"
-                class="secondary-button">
-
-                View Inventory
-
-            </a>
 
         </div>
 

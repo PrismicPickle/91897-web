@@ -619,6 +619,107 @@ nav a.active {
 }
 
 
+/* Legacy case-list theme for the opening page. */
+
+.case-opening-page {
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            #29394d,
+            #070a0f 50%
+        );
+
+}
+
+
+.case-opening-page .topbar {
+
+    top: 0;
+    max-width: none;
+    margin: 0;
+    padding: 15px 30px;
+    background: rgba(13,19,27,.94);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+
+}
+
+
+.case-opening-page .back-button,
+.case-opening-page .inventory-button {
+
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background: #18222e;
+    border: 1px solid #344354;
+    border-radius: 6px;
+    text-decoration: none;
+
+}
+
+
+.case-opening-page .back-button:hover,
+.case-opening-page .inventory-button:hover {
+
+    background: #202d3b;
+
+}
+
+
+.case-opening-page .balance {
+
+    margin-left: auto;
+    padding: 10px 20px;
+    background: #151e28;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+}
+
+
+.case-opening-page .balance strong {
+
+    color: var(--gold);
+
+}
+
+
+.case-opening-page .opening-page {
+
+    padding-top: 30px;
+
+}
+
+
+.case-opening-page .case-price {
+
+    flex-basis: 100%;
+    width: 100%;
+    margin: 0;
+    color: var(--muted);
+    text-align: center;
+
+}
+
+
+.case-opening-page .opening-actions {
+
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.case-opening-page .opening-actions .primary-button {
+
+    align-self: center;
+
+}
+
+
 /* =========================================================
    INVENTORY
 ========================================================= */
@@ -838,6 +939,174 @@ nav a.active {
 
 
 .empty a {
+
+    color: var(--blue);
+
+}
+
+
+/* Legacy site theme for the inventory page. */
+
+.inventory-page {
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            #29394d,
+            #070a0f 50%
+        );
+    color: var(--text);
+
+}
+
+
+.inventory-page .topbar {
+
+    position: relative;
+    top: 0;
+    max-width: none;
+    margin: 0;
+    padding: 15px 30px;
+    background: rgba(13,19,27,.94);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+
+}
+
+
+.inventory-page .inventory-logo {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 58px;
+    height: 58px;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.inventory-page .inventory-logo img {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+
+.inventory-page nav a {
+
+    color: var(--muted);
+    padding: 10px 20px;
+    border-radius: 4px;
+
+}
+
+
+.inventory-page nav a:hover,
+.inventory-page nav a.active {
+
+    color: white;
+    background: #1a2430;
+
+}
+
+
+.inventory-page .balance {
+
+    padding: 10px 20px;
+    background: #151e28;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+}
+
+
+.inventory-page .balance strong {
+
+    color: var(--gold);
+
+}
+
+
+.inventory-page .page {
+
+    max-width: none;
+    padding: 30px;
+
+}
+
+
+.inventory-page .page-heading h1 {
+
+    color: var(--text);
+
+}
+
+
+.inventory-page .inventory-toolbar {
+
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+}
+
+
+.inventory-page .filters input,
+.inventory-page .filters select {
+
+    color: white;
+    background: #0b121a;
+    border-color: var(--border);
+
+}
+
+
+.inventory-page .inventory-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #121a24,
+            #0b1017
+        );
+    border-color: var(--border);
+
+}
+
+
+.inventory-page .inventory-image {
+
+    background:
+        radial-gradient(
+            circle,
+            #293847,
+            #090e14
+        );
+
+}
+
+
+.inventory-page .sell-button {
+
+    background: #18222e;
+    border-color: #344354;
+
+}
+
+
+.inventory-page .sell-button:hover {
+
+    background: #202d3b;
+
+}
+
+
+.inventory-page .empty a {
 
     color: var(--blue);
 

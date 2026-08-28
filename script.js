@@ -60,6 +60,20 @@ const CASE_DATA = {
 
 };
 
+const storedCasePrice =
+    Number(
+        sessionStorage.getItem(
+            "CASE_LAB_CASE_PRICE"
+        )
+    );
+
+if (
+    Number.isFinite(storedCasePrice) &&
+    storedCasePrice > 0
+) {
+    CASE_DATA.price = storedCasePrice;
+}
+
 
 /* =========================================================
    RARITIES
@@ -311,6 +325,164 @@ function updateBalance() {
 }
 
 
+const depositForm =
+    document.getElementById(
+        "depositForm"
+    );
+
+
+if (depositForm) {
+
+    depositForm.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+            const amount =
+                Number(
+                    document.getElementById(
+                        "depositAmount"
+                    ).value
+                );
+
+            if (
+                !Number.isFinite(amount) ||
+                amount <= 0
+            ) {
+                return;
+            }
+
+            state.balance += amount;
+            saveState();
+            depositForm.reset();
+
+        }
+    );
+
+}
+
+
+const withdrawForm =
+    document.getElementById(
+        "withdrawForm"
+    );
+
+
+if (withdrawForm) {
+
+    withdrawForm.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+            const amount =
+                Number(
+                    document.getElementById(
+                        "withdrawAmount"
+                    ).value
+                );
+
+            if (
+                !Number.isFinite(amount) ||
+                amount <= 0 ||
+                amount > state.balance
+            ) {
+                window.alert(
+                    "You do not have enough balance for this withdrawal."
+                );
+                return;
+            }
+
+            state.balance -= amount;
+            saveState();
+            withdrawForm.reset();
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CASE PURCHASES
+========================================================= */
+
+document.querySelectorAll(
+    ".small-box .button, " +
+    ".bottom-box .button, " +
+    ".smallest-centipede .button"
+).forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            event => {
+
+                const priceElement =
+                    button.closest(
+                        ".small-box"
+                    )?.querySelector(
+                        ".small-box-text"
+                    ) ||
+                    button.closest(
+                        ".bottom-box"
+                    )?.querySelector(
+                        ".bottom-box-text"
+                    ) ||
+                    button.closest(
+                        ".smallest-centipede"
+                    )?.querySelector(
+                        ".smallest-centipede-text"
+                    );
+
+                const priceText =
+                    priceElement?.textContent ||
+                    "";
+
+                const price =
+                    Number(
+                        priceText.replace(
+                            /[^0-9.]/g,
+                            ""
+                        )
+                    );
+
+                if (
+                    !Number.isFinite(price) ||
+                    price <= 0
+                ) {
+                    event.preventDefault();
+                    return;
+                }
+
+                if (state.balance < price) {
+                    event.preventDefault();
+                    window.alert(
+                        "You do not have enough balance for this case."
+                    );
+                    return;
+                }
+
+                state.balance -= price;
+                state.spent += price;
+                sessionStorage.setItem(
+                    "CASE_LAB_CASE_PRICE",
+                    String(price)
+                );
+                saveState();
+                event.preventDefault();
+                window.location.href =
+                    "csgo-case.html";
+
+            }
+        );
+
+    }
+);
+
+
 /* =========================================================
    WEAR
 ========================================================= */
@@ -542,6 +714,21 @@ const openAgain =
     );
 
 
+const casePrice =
+    document.getElementById(
+        "casePrice"
+    );
+
+
+if (casePrice) {
+
+    casePrice.textContent =
+        "Case price: " +
+        money(CASE_DATA.price);
+
+}
+
+
 let isOpening = false;
 
 let currentDrop = null;
@@ -613,6 +800,10 @@ function buildRoller() {
 
     rollerTrack.innerHTML = "";
 
+    rollerTrack.style.transition = "none";
+    rollerTrack.style.transform = "translateX(0)";
+    rollerTrack.offsetWidth;
+
 
     const WIN_INDEX = 55;
 
@@ -653,9 +844,6 @@ function buildRoller() {
 
     }
 
-
-    rollerTrack.style.transform =
-        "translateX(0)";
 
 }
 
@@ -1049,6 +1237,24 @@ if (openAgain) {
         () => {
 
             if (!isOpening) {
+
+                if (
+                    state.balance <
+                    CASE_DATA.price
+                ) {
+                    window.alert(
+                        "You do not have enough balance for this case."
+                    );
+                    return;
+                }
+
+                state.balance -=
+                    CASE_DATA.price;
+
+                state.spent +=
+                    CASE_DATA.price;
+
+                saveState();
 
                 startOpening();
 

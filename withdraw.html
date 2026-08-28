@@ -15,7 +15,6 @@
             </a>
             <ul>
                 <li><a href="INDEX.html">Home</a></li>
-                <li><a href="inventory.html">Inventory</a></li>
                 <li class="dropdown">
                     <details>
                         <summary class="dropbtn">Cases <span class="caret">▾</span></summary>
@@ -26,6 +25,7 @@
                         </ul>
                     </details>
                 </li>
+                <li><a href="inventory.html">Inventory</a></li>
                 <li><a href="wallet.html">Wallet</a></li>
                 <li><a href="settings.html">Settings</a></li>
             </ul>
@@ -42,15 +42,24 @@
             <div class="top-menu">
                 <li><a href="withdraw.html" class="active">Withdraw</a></li>
                 <li><a href="deposit.html">Deposit</a></li>
+                <div class="balance">Balance: <strong id="balance">$250.00</strong></div>
             </div>
 
             <!-- Main Content Area -->
             <div class="content">
-                <h1>Welcome to Our Home Page</h1>
-                <p>This is your main content area. You can add text, images, and other elements here.</p>
+                <h1>Withdraw Funds</h1>
+                <p>Remove funds from your CaseLab balance.</p>
+                <form id="withdrawForm" class="wallet-form">
+                    <label for="withdrawAmount">Amount</label>
+                    <div class="amount-input">
+                        <span>$</span>
+                        <input id="withdrawAmount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required>
+                    </div>
+                    <button type="submit" class="wallet-button">Withdraw</button>
+                </form>
             </div>
         </div>
+        <script src="script.js"></script>
     </div>
-
-    </body>
+</body>
 </html>
