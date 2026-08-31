@@ -58,7 +58,7 @@ body {
 
     position: sticky;
 
-    top: 10px;
+    top: 0;
 
     z-index: 100;
 
@@ -599,11 +599,30 @@ nav a.active {
 }
 
 
+.result-chance {
+
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+
+}
+
+
 .result p {
 
     margin: 0;
 
     color: var(--muted);
+
+}
+
+
+.result-price {
+
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 900;
 
 }
 
@@ -699,7 +718,10 @@ nav a.active {
     flex-basis: 100%;
     width: 100%;
     margin: 0;
-    color: var(--muted);
+    padding: 8px 12px;
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 900;
     text-align: center;
 
 }
