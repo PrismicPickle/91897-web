@@ -482,7 +482,7 @@ const TWO_THOUSAND_CASE_ITEMS = [
     {
         name: "Candace condom fingers",
         icon: "🧤",
-        rarity: "covert",
+        rarity: "consumer",
         basePrice: 1500000,
         maxFloat: 0.55,
         fixedPrice: true
