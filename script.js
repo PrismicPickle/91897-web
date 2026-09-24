@@ -182,7 +182,7 @@ const TWO_THOUSAND_RARITY_WEIGHTS = {
     mil: 7,
     restricted: 3.5,
     classified: 2.2,
-    covert: 1.5,
+    covert: 1.2,
     special: 1
 
 };
@@ -462,7 +462,7 @@ const TWO_THOUSAND_CASE_ITEMS = [
     },
 
     {
-        name: "Candace's pet bear",
+        name: "Candice's pet bear",
         icon: "🐻",
         rarity: "classified",
         basePrice: 1000000,
@@ -480,7 +480,7 @@ const TWO_THOUSAND_CASE_ITEMS = [
     },
 
     {
-        name: "Candace condom fingers",
+        name: "Candice condom fingers",
         icon: "🧤",
         rarity: "classified",
         basePrice: 1500000,
@@ -489,7 +489,7 @@ const TWO_THOUSAND_CASE_ITEMS = [
     },
 
     {
-        name: "Candace ripped condom fingers",
+        name: "Candice ripped condom fingers",
         icon: "🧤",
         rarity: "covert",
         basePrice: 3000000,
@@ -498,7 +498,7 @@ const TWO_THOUSAND_CASE_ITEMS = [
     },
 
     {
-        name: "Candace",
+        name: "Candice",
         icon: "👑",
         rarity: "special",
         basePrice: 10000000,
