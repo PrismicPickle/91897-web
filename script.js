@@ -177,13 +177,13 @@ const RARITIES = {
 
 const TWO_THOUSAND_RARITY_WEIGHTS = {
 
-    consumer: 65,
-    industrial: 32,
-    mil: 1.5,
-    restricted: 1,
-    classified: 0.4,
-    covert: 0.09,
-    special: 0.01
+    consumer: 60,
+    industrial: 26,
+    mil: 7,
+    restricted: 3.5,
+    classified: 2.2,
+    covert: 1.5,
+    special: 1
 
 };
 
@@ -482,7 +482,7 @@ const TWO_THOUSAND_CASE_ITEMS = [
     {
         name: "Candace condom fingers",
         icon: "🧤",
-        rarity: "consumer",
+        rarity: "classified",
         basePrice: 1500000,
         maxFloat: 0.55,
         fixedPrice: true
