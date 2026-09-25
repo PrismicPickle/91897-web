@@ -177,13 +177,13 @@ const RARITIES = {
 
 const TWO_THOUSAND_RARITY_WEIGHTS = {
 
-    consumer: 60,
-    industrial: 26,
-    mil: 7,
-    restricted: 3.5,
-    classified: 2.2,
-    covert: 1.2,
-    special: 1
+    consumer: 55,
+    industrial: 22,
+    mil: 8,
+    restricted: 5,
+    classified: 3,
+    covert: 1.5,
+    special: 0.5
 
 };
 
@@ -2458,6 +2458,76 @@ function renderStats() {
         ).length;
 
 
+    const mostValuableEarned =
+        state.history.reduce(
+            (best,item) => {
+
+                const name =
+                    item.name;
+
+                const currentBest =
+                    best.get(name) || {
+                        name,
+                        count: 0,
+                        price: 0,
+                        icon: item.icon || "🎁"
+                    };
+
+                const updated = {
+                    ...currentBest,
+                    count: currentBest.count + 1,
+                    price: Math.max(
+                        currentBest.price,
+                        item.price || 0
+                    ),
+                    icon: currentBest.icon || item.icon || "🎁"
+                };
+
+                best.set(name, updated);
+
+                return best;
+
+            },
+            new Map()
+        );
+
+
+    let mostValuableItem = {
+        name: "None",
+        count: 0,
+        price: 0,
+        icon: "🎁"
+    };
+
+
+    for (const item of mostValuableEarned.values()) {
+
+        if (
+            item.price >
+            mostValuableItem.price
+        ) {
+
+            mostValuableItem = item;
+
+        }
+
+    }
+
+
+    const mostValuableImage =
+        document.getElementById(
+            "mostValuableEarnedImage"
+        );
+
+
+    if (mostValuableImage) {
+
+        mostValuableImage.textContent =
+            mostValuableItem.icon;
+
+    }
+
+
     document.getElementById(
         "casesOpened"
     ).textContent =
@@ -2489,9 +2559,15 @@ function renderStats() {
 
 
     document.getElementById(
-        "currentBalance"
+        "mostValuableEarnedName"
     ).textContent =
-        money(state.balance);
+        mostValuableItem.name;
+
+
+    document.getElementById(
+        "mostValuableEarnedCount"
+    ).textContent =
+        mostValuableItem.count;
 
 
     const historyList =
