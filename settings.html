@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Account Settings</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="page">
-        <!-- Left Vertical Menu Bar -->
         <nav class="left-menu">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="images/Logo.png" alt="Company Logo">
             </a>
             <ul>
-                <li><a href="INDEX.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <details>
                         <summary class="dropbtn">Cases <span class="caret">▾</span></summary>
                         <ul class="dropdown-content">
                             <li><a href="csgo.html">CSGO</a></li>
-                            <li><a href="items.html">Items</a></li>
                             <li><a href="cash.html">Cash</a></li>
                         </ul>
                     </details>
@@ -29,31 +27,54 @@
                 <li><a href="AI%20coded%20files/stats.html">Stats</a></li>
             </ul>
             <div class="account-panel">
-                <a href="settings.html" class="account-link">
-                    <span class="account-icon">👤</span>
-                    <span>Account</span>
+                <a href="settings.html" class="account-link active">
+                    <span class="account-icon">👤</span><span>Account</span>
                 </a>
             </div>
         </nav>
 
         <div class="main-area">
-            <!-- Top Menu Bar -->
             <div class="top-menu">
                 <li><a href="withdraw.html">Withdraw</a></li>
                 <li><a href="deposit.html">Deposit</a></li>
                 <div class="balance">Balance: <strong id="balance">$250.00</strong></div>
             </div>
-
-            <!-- Main Content Area -->
-            <div class="content">
-                <h1>Welcome to Our Home Page</h1>
-                <p>This is your main content area. You can add text, images, and other elements here.</p>
-            </div>
+            <main class="header settings-page">
+                <h1>Account Settings</h1>
+                <section class="settings-login-card">
+                    <h2>Sign in</h2>
+                    <p>Log in to manage your account.</p>
+                    <button class="settings-login-button" type="button" onclick="document.getElementById('id01').style.display='flex'">Login</button>
+                </section>
+            </main>
         </div>
-            <script src="AI%20coded%20files/script.js"></script>
-            </body>
-        </html>
     </div>
 
-    </body>
+    <div id="id01" class="settings-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+        <form class="settings-modal-content" action="#" method="post">
+            <button class="settings-modal-close" type="button" aria-label="Close" onclick="document.getElementById('id01').style.display='none'">&times;</button>
+            <h2 id="login-title">Login</h2>
+            <label for="uname">Username</label>
+            <input id="uname" type="text" placeholder="Enter username" name="uname" required>
+            <label for="psw">Password</label>
+            <input id="psw" type="password" placeholder="Enter password" name="psw" required>
+            <button class="settings-login-button" type="submit">Login</button>
+            <label class="settings-remember"><input type="checkbox" checked name="remember"> Remember me</label>
+            <div class="settings-modal-footer">
+                <button class="settings-cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+                <a href="#">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const loginModal = document.getElementById('id01');
+        window.addEventListener('click', (event) => {
+            if (event.target === loginModal) loginModal.style.display = 'none';
+        });
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') loginModal.style.display = 'none';
+        });
+    </script>
+</body>
 </html>
