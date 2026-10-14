@@ -553,6 +553,7 @@ h6 {
 .amount-input {
     display: flex;
     align-items: center;
+    width: 100%;
     margin-bottom: 18px;
     background-color: #2a2d43;
     border: 1px solid #555975;

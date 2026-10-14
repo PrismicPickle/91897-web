@@ -5,6 +5,10 @@
 
 
 const SAVE_KEY = "CASE_LAB_SAVE_V1";
+const casePagePath =
+    decodeURIComponent(window.location.pathname).includes("/AI coded files/")
+        ? "csgo-case.html"
+        : "AI%20coded%20files/csgo-case.html";
 
 
 /* =========================================================
@@ -1084,7 +1088,7 @@ function showCasePreview(price, caseName, variant, caseType) {
                 caseType
             );
             saveState();
-            window.location.href = "csgo-case.html";
+            window.location.href = casePagePath;
         }
     );
 
@@ -1494,8 +1498,8 @@ if (backButton) {
 
     backButton.href =
         CASE_DATA.type === "cash"
-        ? "cash.html"
-        : "csgo.html";
+        ? "../cash.html"
+        : "../csgo.html";
 
 }
 
@@ -2219,7 +2223,7 @@ function renderInventory() {
 
                 <br><br>
 
-                <a href="csgo-case.html">
+                <a href="${casePagePath}">
                     Open a case
                 </a>
 
