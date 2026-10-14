@@ -743,6 +743,60 @@ h6 {
     color: #d4d6e3;
 }
 
+.settings-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 900px;
+    margin-top: 18px;
+}
+
+.settings-option-card {
+    padding: 24px;
+    color: #fff;
+    background: #414361;
+    border: 1px solid #555975;
+    border-radius: 6px;
+}
+
+.settings-option-card h2 {
+    margin-bottom: 10px;
+    color: #ffd35a;
+}
+
+.settings-option-card p {
+    margin-bottom: 20px;
+    color: #d4d6e3;
+}
+
+.settings-toggle-button {
+    padding: 10px 16px;
+    color: #fff;
+    background: #558c8c;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.settings-speed-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #d4d6e3;
+}
+
+.settings-speed-control input {
+    flex: 1;
+    accent-color: #ffd35a;
+}
+
+@media (max-width: 700px) {
+    .settings-options {
+        grid-template-columns: 1fr;
+    }
+}
+
 .settings-login-button,
 .settings-cancel-button {
     padding: 11px 20px;
@@ -877,4 +931,20 @@ h6 {
         margin: 24px -24px -24px;
         padding: 14px 24px;
     }
+}
+
+.button{
+    background-color: #7f2ccb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-family: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 6px;
 }

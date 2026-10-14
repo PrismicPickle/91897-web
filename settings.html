@@ -46,6 +46,22 @@
                     <p>Log in to manage your account.</p>
                     <button class="settings-login-button" type="button" onclick="document.getElementById('id01').style.display='flex'">Login</button>
                 </section>
+                <div class="settings-options">
+                    <section class="settings-option-card">
+                        <h2>Dark Mode</h2>
+                        <p>Choose the appearance you prefer.</p>
+                        <button class="settings-toggle-button" type="button">Dark Mode</button>
+                    </section>
+                    <section class="settings-option-card">
+                        <h2>Scroll Speed</h2>
+                        <p>Adjust how quickly the page scrolls.</p>
+                        <label class="settings-speed-control" for="scroll-speed">
+                            <span>Slow</span>
+                            <input id="scroll-speed" type="range" min="1" max="10" value="5">
+                            <span>Fast</span>
+                        </label>
+                    </section>
+                </div>
             </main>
         </div>
     </div>
